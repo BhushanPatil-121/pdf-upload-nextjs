@@ -1,0 +1,9 @@
+export default function Page() {
+    return (
+        <p className="text-2xl">
+            Showing the blog post for the
+            slug <strong>{pdf}</strong>
+        </p>
+    )
+
+}

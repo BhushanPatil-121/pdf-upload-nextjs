@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+  border-radius: 20px;
+  border: dashed 2px lightgrey;
+}
+
+.mainHeading{
+  color: grey;
+}
+
+.mainForm{
+  
+}

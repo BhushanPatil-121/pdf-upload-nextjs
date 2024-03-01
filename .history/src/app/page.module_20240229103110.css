@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.mainContainer{
+  display: "flex",
+        flexDirection: "column";
+        justifyContent: "center";
+        alignItems: "center";
+        padding: '50px 100px';
+        borderRadius: "20px";
+        border: " dashed 2px lightgrey;
+}
