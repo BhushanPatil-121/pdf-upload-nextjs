@@ -83,7 +83,7 @@ export default function Home() {
     let value = e.target.value
     let filteredArray: any = pdfList.filter((item) => item.fileName?.toLowerCase().includes(value.toLowerCase()));
     setSearchList(filteredArray)
-    if (searchList.length == 0) {
+    if (searchList.length  1) {
       setListIsEmpty(true)
     }else{
       setListIsEmpty(false)

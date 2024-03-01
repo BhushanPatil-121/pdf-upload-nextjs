@@ -42,7 +42,7 @@ interface PdfList {
 //function showon ui
 export default function Home() {
 
-  const [requestData, setRequestData] = useState(new Date());
+
   const [loading, setLoading] = useState(false);
   const [listIsEmpty, setListIsEmpty] = useState(false);
   const [hasFile, setHasFile] = useState(false);
@@ -75,7 +75,7 @@ export default function Home() {
       }
     }
     getPdfList()
-  }, [requestData])
+  }, [loading])
 
 
   // search pdf by is name
@@ -83,7 +83,7 @@ export default function Home() {
     let value = e.target.value
     let filteredArray: any = pdfList.filter((item) => item.fileName?.toLowerCase().includes(value.toLowerCase()));
     setSearchList(filteredArray)
-    if (searchList.length == 0) {
+    if (searchList.length <= 1) {
       setListIsEmpty(true)
     }else{
       setListIsEmpty(false)
@@ -172,13 +172,9 @@ export default function Home() {
     );
     const result = await body.json();
     if (result.status === "200") {
-      let deletedPdfList = 
-      setSearchList(searchList.filter(x => x.fileName !== f))
-      
+      setLoading(true);
+      setLoading(false);
     }
-    // to show changes in pdf list ( useEffect trigger)
-    setRequestData(new Date());
-    setLoading(false);
   }
 
   return (

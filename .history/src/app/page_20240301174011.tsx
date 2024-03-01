@@ -83,7 +83,7 @@ export default function Home() {
     let value = e.target.value
     let filteredArray: any = pdfList.filter((item) => item.fileName?.toLowerCase().includes(value.toLowerCase()));
     setSearchList(filteredArray)
-    if (searchList.length == 0) {
+    if (searchList.length <= 1) {
       setListIsEmpty(true)
     }else{
       setListIsEmpty(false)
@@ -176,7 +176,7 @@ export default function Home() {
       setSearchList(searchList.filter(x => x.fileName !== f))
       
     }
-    // to show changes in pdf list ( useEffect trigger)
+    // to show changes in pdf list ( useEffect triger)
     setRequestData(new Date());
     setLoading(false);
   }
