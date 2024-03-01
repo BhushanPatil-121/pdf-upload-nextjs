@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function Page({ params }: any) {
     let fileName = params.pdf;
     console.log(params);
-    
+
     const [file, setFile] = useState("")
     useEffect(() => {
         const getPdfList = async () => {
