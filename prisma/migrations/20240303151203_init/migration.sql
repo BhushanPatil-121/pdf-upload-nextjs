@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "pdfTable" ALTER COLUMN "size" SET DATA TYPE TEXT;
